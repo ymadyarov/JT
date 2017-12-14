@@ -13,8 +13,10 @@ Ext.define('JT.view.main.List', {
     },
 
     columns: [
-        { text: 'id',  dataIndex: 'id', align: 'left' },
-        { text: 'key', dataIndex: 'key', align: 'left'}
+        { text: 'Assignee',  dataIndex: 'assignee', align: 'left', width: 200 },
+        { text: 'Issue', dataIndex: 'key', align: 'left'},
+        { text: 'Original estimate', dataIndex: 'timeoriginalestimate', align: 'left'},
+        { text: 'Blue man group', dataIndex: 'blueman', align: 'left', flex: 1}
     ],
 
     listeners: {

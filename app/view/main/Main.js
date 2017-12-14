@@ -76,7 +76,7 @@ Ext.define('JT.view.main.Main', {
     },
     items: [{
         title: 'Home',
-        iconCls: 'fa-home',
+        iconCls: 'fa-tasks',
 		layout: 'fit',
 		border:5,
 		//flex:1,
@@ -85,8 +85,8 @@ Ext.define('JT.view.main.Main', {
             xtype: 'mainlist'//, flex:1
         }]
     }, {
-        title: 'Users',
-        iconCls: 'fa-user',
+        title: 'Chart',
+        iconCls: 'fa-bar-chart',
         bind: {
             html: '{loremIpsum}'
         }

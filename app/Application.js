@@ -15,14 +15,14 @@ Ext.define('JT.Application', {
     launch: function () {
         /*Ext.define('Issue1', {
 			extend: 'Ext.data.Model',
-			fields: ['id', 'key']
+			fields: ['id', 'key', 'assignee']
 		});
 		//debugger;
 		var store = Ext.create('Ext.data.Store', {
 			 model: 'Issue1',
 			 proxy: {
 				 type: 'ajax',
-				 url : 'http://localhost/Test1/jira/rest/api/2/search?jql=assignee=ymadyarov&fields=id',
+				 url : 'http://localhost/Test1/jira/rest/api/2/search?jql=assignee=ymadyarov',
 				 headers:{'Authorization': 'Basic eW1hZHlhcm92OkluZ29kd2V0cnVzdDQh'},
 				 reader: {
 					 type: 'json',
@@ -38,7 +38,7 @@ Ext.define('JT.Application', {
 			callback: function(records, operation, success) {
 				// the operation object
 				// contains all of the details of the load operation
-				debugger;
+				//debugger;
 			}
 		});*/
     },
