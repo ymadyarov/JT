@@ -9,13 +9,17 @@ Ext.define('JT.model.Issue', {
 		}, {
 			name: 'timeoriginalestimate',
 			convert: function (value, record) {
-				var total = record.data.fields.timeoriginalestimate ? (record.data.fields.timeoriginalestimate)/60 : 0;
-				var hours = Math.floor(Math.abs(total) / 60);
-				var mins = Math.abs(mins) % 60;
-				hours = hours > 0 ? hours > 1 ? hours + ' hours' :  hours + ' hour' : '';
-				mins = mins > 0 ? mins > 1 ? mins + ' minutes' : mins + ' minute' : '';
-				var time = hours ? hours + ' ' : '' + mins ? mins + ' ' : '';
-				return time;
+				return record.data.fields.timeoriginalestimate ? (record.data.fields.timeoriginalestimate) : 0;
+			}
+		}, {
+			name: 'timeestimate',
+			convert: function (value, record) {
+				return record.data.fields.timeestimate ? (record.data.fields.timeestimate) : 0;
+			}
+		}, {
+			name: 'originalestimate',
+			convert: function (value, record) {
+				return Common.formatTime(record.data.fields.timeoriginalestimate ? (record.data.fields.timeoriginalestimate) : 0);
 			}
 		}, {
 			name: 'blueman',
@@ -23,6 +27,11 @@ Ext.define('JT.model.Issue', {
 				return record.data.fields.customfield_13300 ? record.data.fields.customfield_13300.value: null;
 			}
 			//customfield_13300
+		}, {
+			name: 'progress',
+			convert: function (value, record) {
+				return record.data.fields.aggregateprogress.percent ? record.data.fields.aggregateprogress.percent / 100 : null;
+			}
 		}
 	]
 });

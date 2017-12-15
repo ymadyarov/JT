@@ -75,7 +75,7 @@ Ext.define('JT.view.main.Main', {
         }
     },
     items: [{
-        title: 'Home',
+        title: 'Tasks',
         iconCls: 'fa-tasks',
 		layout: 'fit',
 		border:5,

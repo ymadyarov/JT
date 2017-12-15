@@ -9,7 +9,8 @@ Ext.application({
     extend: 'JT.Application',
 
     requires: [
-        'JT.view.main.Main'
+        'JT.view.main.Main',
+        'JT.Common'
     ],
 
     // The name of the initial view to create. With the classic toolkit this class
