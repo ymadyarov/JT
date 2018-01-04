@@ -17,7 +17,8 @@ Ext.application({
     // will gain a "viewport" plugin if it does not extend Ext.Viewport. With the
     // modern toolkit, the main view will be added to the Viewport.
     //
-    mainView: 'JT.view.main.Main'
+    mainView: 'JT.view.main.Main',
+    proxyHeaders: {'Authorization': 'Basic eW1hZHlhcm92OkluZ29kd2V0cnVzdDQh'}  
 	
     //-------------------------------------------------------------------------
     // Most customizations should be made to JT.Application. If you need to

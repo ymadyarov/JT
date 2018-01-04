@@ -7,19 +7,19 @@ Ext.define('JT.model.Issue', {
 				return record.data.fields.assignee ? record.data.fields.assignee.displayName: null;
 			}
 		}, {
-			name: 'timeoriginalestimate',
+			name: 'originalestimate',
 			convert: function (value, record) {
-				return record.data.fields.timeoriginalestimate ? (record.data.fields.timeoriginalestimate) : 0;
+				return Common.formatTime(record.data.fields.timeoriginalestimate);
 			}
 		}, {
 			name: 'timeestimate',
 			convert: function (value, record) {
-				return record.data.fields.timeestimate ? (record.data.fields.timeestimate) : 0;
+				return Common.formatTime(record.data.fields.timeestimate);
 			}
 		}, {
-			name: 'originalestimate',
+			name: 'timespent',
 			convert: function (value, record) {
-				return Common.formatTime(record.data.fields.timeoriginalestimate ? (record.data.fields.timeoriginalestimate) : 0);
+				return Common.formatTime(record.data.fields.timespent);
 			}
 		}, {
 			name: 'blueman',

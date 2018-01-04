@@ -20,8 +20,21 @@ Ext.define('JT.view.main.Main', {
 
     controller: 'main',
     viewModel: 'main',
-
     ui: 'navigation',
+    tabPosition: 'left',
+    tabRotation: 0,
+    tabBar: {
+        // turn off borders for classic theme.  neptune and crisp don't need this
+        // because they are borderless by default
+        border: false
+    },
+
+    defaults: {
+        textAlign: 'left',
+        bodyPadding: 5
+    },
+
+    /*ui: 'navigation',
 
     tabBarHeaderPosition: 1,
     titleRotation: 0,
@@ -58,7 +71,7 @@ Ext.define('JT.view.main.Main', {
     },
 
     defaults: {
-        bodyPadding: 10,
+        bodyPadding: 5,
         tabConfig: {
             plugins: 'responsive',
             responsiveConfig: {
@@ -73,7 +86,7 @@ Ext.define('JT.view.main.Main', {
                 }
             }
         }
-    },
+    },*/
     items: [{
         title: 'Tasks',
         iconCls: 'fa-tasks',
