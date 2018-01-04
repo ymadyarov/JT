@@ -1,3 +1,11 @@
+var groupingFeature = Ext.create('Ext.grid.feature.GroupingSummary', {    
+        id: 'group',
+        ftype: 'groupingsummary',
+        groupHeaderTpl: '{name}',
+        collapsible: false,
+        hideGroupedHeader: true,
+        enableGroupingMenu: false
+});
 Ext.define('JT.view.main.List', {
     extend: 'Ext.grid.Panel',
     xtype: 'mainlist',
@@ -20,17 +28,24 @@ Ext.define('JT.view.main.List', {
             labelWidth: 50
         }, {
             xtype: 'checkbox',            
-            boxLabel: 'Grouped by Engineer'
+            boxLabel: 'Grouped by Engineer',
+            checked: true,
+            handler: function(v1, v2) {                
+                if (v2)
+                    groupingFeature.enable();  
+                else
+                    groupingFeature.disable();
+            }
         }]
     }],
-    features: [{
+    features: [groupingFeature/*{
         id: 'group',
         ftype: 'groupingsummary',
         groupHeaderTpl: '{name}',
         collapsible: false,
         hideGroupedHeader: true,
         enableGroupingMenu: false
-    }],
+    }*/],
     columns: [
         { text: 'Engineer',  dataIndex: 'engineer', align: 'left', width: 120 },
         //{ text: 'Assignee',  dataIndex: 'assignee', align: 'left', width: 200 },
