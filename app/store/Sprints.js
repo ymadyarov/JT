@@ -1,14 +1,12 @@
 Ext.define('JT.store.Sprints', {
 	extend: 'Ext.data.Store',
 	alias: 'store.sprints',
+	//model:'JT.model.Sprint',
 	fields:[''],
 	proxy: {
 		type: 'ajax',
-		//url: 'http://localhost/Test1/jira/rest/api/2/search?jql=assignee=ymadyarov&fields=id',
-		//url: 'http://localhost/Test1/jira/rest/api/2/search?jql=assignee=ymadyarov%20AND%20resolution=Unresolved',
-		//url: 'http://localhost/Test/data.json',
-		url:   'http://jira.acresso.com/jira/rest/agile/1.0/board/264/sprint',
-		headers:{'Authorization': 'Basic eW1hZHlhcm92OkluZ29kd2V0cnVzdDQh'},
+		url: 'http://jira.acresso.com/jira/rest/agile/1.0/board/264/sprint',
+		headers: Common.proxyHeaders,
 		reader: {
 			type: 'json',
 			rootProperty: 'values'
